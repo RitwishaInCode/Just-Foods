@@ -1,0 +1,55 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+/* for the entire bar above */
+.header:hover{
+    border: 1px solid blue;
+}
+.image{
+    width: 120px;
+}
+/* click on flex in console to understand */
+
+.navbar{
+    padding: 0px 20px;
+}
+/* ul items to have 0px for top and bottom and 20px for left and right */
+
+.navbar > ul{
+    font-size: 24px;
+    display: flex;
+list-style-type: none;
+}
+/* to display the li items in horizontal way  */
+
+.navbar > ul > li{
+   margin: 10px;
+   padding: 10px; 
+
+}
+/* in between the li items */
+
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+} 
+/* to display cards in :horizontal */
+.rest-card{
+    padding: 5px;
+    width: 200px;
+    height: 380px;
+}
+.rest-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.rest-img{
+    width: 200px;
+}
+
+.search{
+    padding: 20px;
+}
+

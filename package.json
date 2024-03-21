@@ -1,0 +1,26 @@
+{
+  "name": "just-foods",
+  "version": "1.0.0",
+  "description": "Online Food ordering App using React.Js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build parcel index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "food",
+    "ordering",
+    "app",
+    "react"
+  ],
+  "author": "Ritwisha Mukherjee",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
