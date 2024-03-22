@@ -24,7 +24,7 @@ const Header = () => {
 
 const styles = {
   backgroundColor: "#f0f0f0",
-  margin: "60px",
+  margin: "30px",
 };
 
 const restobj = [
@@ -1396,6 +1396,10 @@ const restobj = [
 
 const RestCard = (props) => {
   const { restinfo } = props;
+  const { name, cuisines, costForTwo, avgRatingString, cloudinaryImageId } =
+    restinfo?.info;
+  // optional chaining
+
   return (
     <div className="rest-card" style={styles}>
       <img
@@ -1403,13 +1407,13 @@ const RestCard = (props) => {
         alt="rest-image"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          restinfo.info.cloudinaryImageId
+          cloudinaryImageId
         }
       />
-      <h3>{restinfo.info.name}</h3>
-      <h5>{restinfo.info.cuisines.join()} </h5>
-      <p>{restinfo.info.costForTwo}</p>
-      <p>{restinfo.info.avgRatingString}</p>
+      <h3>{name}</h3>
+      <h5>{cuisines.join(", ")} </h5>
+      <p>{costForTwo}</p>
+      <p>{avgRatingString}</p>
     </div>
   );
 };
@@ -1419,14 +1423,11 @@ const Body = () => {
     <div className="body">
       <div className="search">Search </div>
       <div className="rest-container">
-        <RestCard restinfo={restobj[0]} />
-        <RestCard restinfo={restobj[1]} />
-        <RestCard restinfo={restobj[2]} />
-        <RestCard restinfo={restobj[3]} />
-        <RestCard restinfo={restobj[4]} />
-        <RestCard restinfo={restobj[5]} />
-        <RestCard restinfo={restobj[6]} />
-        <RestCard restinfo={restobj[7]} />
+        {restobj.map((restaurant) => (
+          <RestCard key={restaurant.info.id} restinfo={restaurant} />
+        ))}
+        {/* map function returning a JSX  
+        key: to uniquely identify a new restaurant card and avoid rendering. react can will which is the new card using the IDs*/}
       </div>
     </div>
   );

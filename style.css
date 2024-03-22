@@ -38,15 +38,16 @@ list-style-type: none;
 /* to display cards in :horizontal */
 .rest-card{
     padding: 5px;
-    width: 200px;
-    height: 380px;
+    width: 250px;
+    /* height: 380px; */
 }
 .rest-card:hover{
     border: 1px solid black;
     cursor: pointer;
 }
 .rest-img{
-    width: 200px;
+    width: 250px;
+    height: 200px
 }
 
 .search{
