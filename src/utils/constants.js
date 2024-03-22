@@ -1,33 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+export const LOGO_URL =
+  "https://static.vecteezy.com/system/resources/thumbnails/007/500/121/small_2x/food-delivery-icon-clip-art-logo-simple-illustration-free-vector.jpg";
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo">
-        <img
-          className="image"
-          src="https://static.vecteezy.com/system/resources/thumbnails/007/500/121/small_2x/food-delivery-icon-clip-art-logo-simple-illustration-free-vector.jpg"
-        />
-      </div>
-      <div className="navbar">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact</li>
-          <li>Cart Items</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+export const IMG_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-const styles = {
-  backgroundColor: "#f0f0f0",
-  margin: "30px",
-};
-
-const restobj = [
+export const restobj = [
   {
     info: {
       id: "3022",
@@ -1393,54 +1370,3 @@ const restobj = [
     },
   },
 ];
-
-const RestCard = (props) => {
-  const { restinfo } = props;
-  const { name, cuisines, costForTwo, avgRatingString, cloudinaryImageId } =
-    restinfo?.info;
-  // optional chaining
-
-  return (
-    <div className="rest-card" style={styles}>
-      <img
-        className="rest-img"
-        alt="rest-image"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      />
-      <h3>{name}</h3>
-      <h5>{cuisines.join(", ")} </h5>
-      <p>{costForTwo}</p>
-      <p>{avgRatingString}</p>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search </div>
-      <div className="rest-container">
-        {restobj.map((restaurant) => (
-          <RestCard key={restaurant.info.id} restinfo={restaurant} />
-        ))}
-        {/* map function returning a JSX  
-        key: to uniquely identify a new restaurant card and avoid rendering. react can will which is the new card using the IDs*/}
-      </div>
-    </div>
-  );
-};
-
-const MainApp = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<MainApp />);

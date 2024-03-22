@@ -1,4 +1,5 @@
-//initial- not a great way to write a code
+# initial- not a great way to write a code
+
 const RestCard = (props) => {
 const { restinfo } = props;
 return (
@@ -17,3 +18,27 @@ const Body = () => {
     </div>
   );
 };
+
+# two types of exports and imports-
+
+default and named exports.
+default: to export and import one file, named: to export and import multiple files
+
+# Hooks:
+
+Hook is also a normal JS utility function - prebuild function with super powers given by react. Called react Hooks
+
+local State variable - powerful variable using Hooks
+
+- maintains the state of my component, inside that particular component. scope is limited to that component
+- useState() - create super powerful state variables in react
+  when we call the useState() function, we receive a state variable inside an array.
+
+  const[variable1] = useState([default values]);
+  // this 'variable1' becomes the powerful variable
+
+  let variable1 = [default values]; //for comparison
+
+definition: whenever a state variable updates, react re-renders my component. - update the UI as per the new data passed on (here- filter)
+
+- useEffect()
