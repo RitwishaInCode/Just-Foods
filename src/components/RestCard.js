@@ -7,8 +7,14 @@ const styles = {
 
 const RestCard = (props) => {
   const { restinfo } = props;
-  const { name, cuisines, costForTwo, avgRatingString, cloudinaryImageId } =
-    restinfo?.info;
+  const {
+    name,
+    cuisines,
+    costForTwo,
+    avgRatingString,
+    cloudinaryImageId,
+    sla,
+  } = restinfo?.info;
   // optional chaining
 
   return (
@@ -22,6 +28,7 @@ const RestCard = (props) => {
       <h5>{cuisines.join(", ")} </h5>
       <p>{costForTwo}</p>
       <p>{avgRatingString}</p>
+      <p>{sla?.slaString}</p>
     </div>
   );
 };
