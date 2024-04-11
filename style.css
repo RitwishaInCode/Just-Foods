@@ -72,3 +72,8 @@ list-style-type: none;
     height: 300px;
     background-color: #f0f0f0;
 }
+
+.user-card{
+    padding: 10px;
+    border: 1px solid black;
+}

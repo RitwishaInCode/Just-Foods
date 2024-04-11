@@ -42,3 +42,6 @@ local State variable - powerful variable using Hooks
 definition: whenever a state variable updates, react re-renders my component. - update the UI as per the new data passed on (here- filter)
 
 - useEffect()
+
+Outlet:
+Main page is rendered using appRouter -> calling MainApp -> which has <Header> component inside it and when it goes to <Outlet/> component, it will call the children elements according to the path that we have set -> <body>, <About>, <contact>

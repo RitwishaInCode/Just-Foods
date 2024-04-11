@@ -16,3 +16,6 @@ export const IMG_URL =
 //       avgRating: 4.5,
 //         deliveryTime: 25,
 // ];
+
+// export const MENU_API =
+//   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9939369&lng=77.5980282&restaurantId=";
